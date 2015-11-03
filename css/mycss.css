@@ -49,3 +49,8 @@ html, body{
     margin-top: 20px;
     width: 80px;
 }
+
+.dummy-video{
+    max-width: 100%;
+
+ }
