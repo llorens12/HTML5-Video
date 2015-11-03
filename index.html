@@ -28,7 +28,7 @@
         <script type="text/javascript" src="js/conections.js"></script>
 
     </head>
-   <body class="container" >
+   <body class="container" onload="addVideoControls()">
 
         <header class="row navbar navbar-inverse navbar-top ">
 
@@ -56,24 +56,56 @@
             <div class="row">
 
                 <div class="row text-center">
-                    <video id="dummy-video" class="dummy-video" <!--poster="img/poster.jpg"-->>
+                    <video id="dummy-video" class="dummy-video" poster="img/poster.png">
                         <source src="video/dummy.mp4" type="video/mp4">
                         Your browser does not support the video element.
                     </video>
                 </div>
-                <div class="row div-video-controls">
+                <div id="videoControls" class="row div-video-controls">
+
                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-                    <div id="play-btn"      class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">Play</div>
-                    <div id="pause-btn"     class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">Pause</div>
-                    <div id="stop-btn"      class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">Stop</div>
-                    <div id="vol-+-btn"     class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">+ Vol</div>
-                    <div id="vol---btn"     class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">- Vol</div>
-                    <div id="mute-btn"      class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">Mute</div>
-                    <div id="unmute-btn"    class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">Unmute</div>
-                    <div id="speed-+-btn"   class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">+ Speed</div>
-                    <div id="speed---btn"   class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">- Speed</div>
-                    <div id="replay-btn"    class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">Replay</div>
+
+                    <div  class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id="play-btn" class="glyphicon glyphicon-play video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id="pause-btn" class="glyphicon glyphicon-pause video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id="stop-btn" class="glyphicon glyphicon-stop video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id="vol-+-btn" class="glyphicon glyphicon-volume-up video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id="vol---btn" class="glyphicon glyphicon-volume-down video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id="mute-btn" class="glyphicon glyphicon-volume-off video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id=speed---btn" class="glyphicon glyphicon-fast-backward video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span id=speed-+-btn" class="glyphicon glyphicon-fast-forward video-icon"></span>
+                    </div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span  id="replay-btn" class="glyphicon glyphicon-repeat video-icon"></span>
+                    </div>
+
                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 video-controls">
+                        <span  id="fullscreen-btn" class="glyphicon glyphicon-film video-icon"></span>
+                    </div>
 
                 </div>
 
