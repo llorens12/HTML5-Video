@@ -1,10 +1,49 @@
+var player;
+var controls;
+
+
 window.onload = function(){
 
-    document.getElementById("dummy-video").onclick = function()
+    player = document.getElementById('dummy-video');
+    controls = document.getElementById("videoControls");
+    'use strict';
+
+    player.onclick = function()
     {
         this.play();
-        document.getElementById("videoControls").style.opacity = '0';
     };
+    player.onended = function()
+    {
+        controls.style.visibility = "visible";
+    };
+
+    player.onplay = function()
+    {
+        controls.style.visibility = "hidden";
+    };
+
+    player.onpause = function()
+    {
+        controls.style.visibility = "visible";
+    };
+
+    document.getElementById("customVideo").onmouseenter = function()
+    {
+        controls.style.visibility = "visible";
+    };
+
+    controls.onmouseenter = function()
+    {
+        controls.style.visibility = "visible";
+    };
+
+    document.getElementById("customVideo").onmouseout = function()
+    {
+        controls.style.visibility = "hidden";
+    };
+
+
+
 
     insertOnClick(document.getElementsByClassName("video-controls"));
 
@@ -17,15 +56,18 @@ function insertOnClick(events)
         events[i].onclick = function()
         {
             setControls(this);
-        }
+        };
+
+        events[i].onmouseenter = function()
+        {
+            controls.style.visibility = "visible";
+        };
     }
 }
 
 var fullScreen= false;
 
 function setControls(event) {
-    var player = document.getElementById('dummy-video');
-
 
     switch (event.id) {
 
@@ -85,7 +127,7 @@ function setControls(event) {
 
                 if (player.requestFullscreen) player.requestFullscreen();
 
-                else if (player.mozRequestFullScreen) player.mozRequestFullScreen();
+                else if (player.mozRequestFullScreen) document.getElementById("customVideo").mozRequestFullScreen();
 
                 else if (player.webkitRequestFullscreen) player.webkitRequestFullscreen();
 

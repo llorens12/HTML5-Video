@@ -63,9 +63,7 @@ html, body{
     color: white;
 }
 
-.div-video-controls:hover{
-    opacity: 1.0 !important;
-}
+
 
 .video-controls{
     text-align: center;
