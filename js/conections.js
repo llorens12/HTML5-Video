@@ -37,7 +37,7 @@ window.onload = function(){
         controls.style.visibility = "visible";
     };
 
-
+//  Change onmouseout for onmouseleave
     document.getElementById("customVideo").onmouseleave = function()
     {
         controls.style.visibility = "hidden";
