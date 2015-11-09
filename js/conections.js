@@ -2,53 +2,50 @@ var player;
 var controls;
 
 
-window.onload = function(){
+$(document).onready(function(){
 
     player = document.getElementById('dummy-video');
     controls = document.getElementById("videoControls");
     'use strict';
 
-    player.onclick = function()
-    {
-        this.play();
-    };
-    player.onended = function()
-    {
-        controls.style.visibility = "visible";
-    };
+    $("#dummy-video")
+        .onclick = function()
+            {
+                this.play();
+            }
+        .on('onended onpause', function()
+            {
+                $("#videoControls").style.visibility = "visible";
+            })
+        .onplay = function()
+            {
+                $("#videoControls").style.visibility = "hidden";
+            };
 
-    player.onplay = function()
-    {
-        controls.style.visibility = "hidden";
-    };
-
-    player.onpause = function()
-    {
-        controls.style.visibility = "visible";
-    };
-
-    document.getElementById("customVideo").onmouseenter = function()
-    {
-        controls.style.visibility = "visible";
-    };
+    $("#customVideo")
+        .onmouseenter = function()
+            {
+                $("#videoControls").style.visibility = "visible";
+            }
+        .onmouseleave = function()
+            {
+                $("#videoControls").style.visibility = "hidden";
+            };
 
     controls.onmouseenter = function()
     {
-        controls.style.visibility = "visible";
+        $("#videoControls").style.visibility = "visible";
     };
 
 //  Change onmouseout for onmouseleave
-    document.getElementById("customVideo").onmouseleave = function()
-    {
-        controls.style.visibility = "hidden";
-    };
+
 
 
 
 
     insertOnClick(document.getElementsByClassName("video-controls"));
 
-};
+});
 
 function insertOnClick(events)
 {
@@ -100,8 +97,7 @@ function setControls(event) {
 
         case "mute-btn":
 
-            if(player.muted) player.muted = false;
-            else player.muted = true;
+            player.muted = !player.muted;
             break;
 
         case "speed---btn":

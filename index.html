@@ -1,6 +1,6 @@
 <html lang="en">
 
-    <head>
+   <head>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,22 +24,23 @@
         <link  href="css/mycss.css" rel="stylesheet">
         <!-- My javascript -->
         <script type="text/javascript" src="js/conections.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 
     </head>
    <body class="container">
 
-        <header class="row navbar navbar-inverse navbar-top ">
+        <header class="row navbar navbar-inverse navbar-fixed-top ">
 
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-                <a type="link" id="link-logo" href="home.php">
-                    <h1 class="navbar-text">
+                <a type="link" id="link-logo" href="index.html">
+                    <h3 class="navbar-text">
                         Template
-                    </h1>
+                    </h3>
                 </a>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs text-center" id="nav-btn-home">
-                <a class="btn btn-default navbar-btn btn-home" id="btn-home" href="#">
+                <a class="btn btn-default navbar-btn" id="btn-home" href="index.html">
                     <span class="glyphicon glyphicon-home"></span>
                 </a>
             </div>
@@ -49,17 +50,17 @@
 
         </header>
 
-        <section class="row content-row content " id="section-row">
+        <main class="row content-row" id="main-tag">
 
             <div id= "customVideo" class="row">
 
                 <div class="row text-center">
-                    <video id="dummy-video" class="dummy-video" poster="img/poster.png">
+                    <video id="dummy-video" poster="img/poster.png">
                         <source src="video/dummy.mp4" type="video/mp4">
                         Your browser does not support the video element.
                     </video>
                 </div>
-                <div id="videoControls" class="row div-video-controls">
+                <div id="divVideoControls" class="row">
 
                     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 
@@ -109,7 +110,7 @@
 
             </div>
 
-        </section>
+        </main>
 
         <footer class="row navbar navbar-inverse navbar-bottom text-center">
 
